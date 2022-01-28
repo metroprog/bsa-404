@@ -133,13 +133,11 @@ body {
   background-color: #fff;
 }
 
-header {
-	position: relative;
-	top: -40px;
+header {	
+	margin-top: -40px;
 	background-color: #f6f7fc;
 	-webkit-font-smoothing: antialiased;
 	transform: translate(0, 40px);
-	
 	transition: transform 2s ;
 }
 
