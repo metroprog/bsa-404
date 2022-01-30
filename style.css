@@ -133,13 +133,23 @@ body {
   background-color: #fff;
 }
 
+@keyframes header_move {
+  0% {
+    top: -50px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
 header {
+  position: relative;
   background-color: #f6f7fc;
   -webkit-font-smoothing: antialiased;
-  margin-top: -40px;
-  top: -40px;
-  transform: translate(0, 40px);
-  transition: transform 3s;
+  animation-name: header_move;
+  animation-duration: 1s;
+  animation-timing-function: linear;
 }
 
 .topnav {
@@ -155,10 +165,10 @@ header {
 }
 
 .topnav-right {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .avatar-container {
   position: relative;
@@ -171,7 +181,7 @@ header {
 .avatar-container .avatar {
   width: 40px;
   height: 40px;
-  background-color: #F8991C;
+  background-color: #f8991c;
   overflow: hidden;
   font-size: 1.25rem;
   text-transform: uppercase;
@@ -185,7 +195,7 @@ header {
 }
 
 #menu-toggle:hover + .avatar-container .avatar {
-  background-color: #F78C19;
+  background-color: #f78c19;
 }
 
 .first-letter {
@@ -210,7 +220,6 @@ header {
 .bell:hover {
   background-color: #919ba8;
 }
-
 
 #menu-toggle {
   display: block;
