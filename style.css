@@ -134,13 +134,8 @@ body {
 }
 
 @keyframes header_move {
-  0% {
-    top: -50px;
-  }
-
-  100% {
-    top: 0px;
-  }
+  0% {transform: translateY(-150%);}
+  100% {transform: translateY(0%);}
 }
 
 header {
@@ -325,6 +320,7 @@ main {
   display: flex;
   align-items: center;
   opacity: 0.9;
+  transform: translateX(150%);
 }
 
 .pop-up-item .pop-up-status {
@@ -365,4 +361,28 @@ main {
 
 .pop-up-warning .pop-up-icon:before {
   mask-image: url("img/icon-warning.svg");
+}
+
+@keyframes notification-appearance {
+	0% {transform: translateX(150%);}
+	10% {transform: translateX(50%);}
+	15% {transform: translateX(-5%);}
+	30% {transform: translateX(5%);}
+	45% {transform: translateX(-3%);}
+	60% {transform: translateX(3%);}
+	75% {transform: translateX(-1%);}
+	85% {transform: translateX(1%);}
+	100% {transform: translateX(0);}
+  }
+
+.pop-up-item:nth-child(1) {
+	animation: notification-appearance 0.7s ease-in-out forwards;
+}
+
+.pop-up-item:nth-child(2) {
+	animation: notification-appearance 0.7s forwards 0.7s;
+}
+
+.pop-up-item:nth-child(3) {
+	animation: notification-appearance 0.7s forwards 1.4s;
 }
